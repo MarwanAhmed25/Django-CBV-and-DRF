@@ -12,6 +12,8 @@ urlpatterns = [
     path('api/v1/types/', include('product_types.api.urls')),
     path('api/v1/models/', include('product_models.api.urls')),
     path('api-auth', include('rest_framework.urls')),
+    path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('api/v1/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
