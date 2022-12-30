@@ -4,3 +4,5 @@ lib
 lib64
 mediafiles
 static
+db.sqlite3
+__pycache__
