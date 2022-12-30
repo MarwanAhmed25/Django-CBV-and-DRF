@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'drf_spectacular',
 
     'product_types.apps.ProductTypesConfig',
     'product_models.apps.ProductModelsConfig',
@@ -155,5 +156,12 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication"
     ],
+    "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",
 }
 
+
+SPECTACULAR_SETTINGS = {
+    "TITLE":"Mobile App Api",
+    "DESCRIPTION":"An Api for Mobile App",
+    "VERSION":"1.0.0",
+}
