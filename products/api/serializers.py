@@ -4,4 +4,4 @@ from ..models import Product
 class ProductSerializer(ModelSerializer):
     class Meta:
         model = Product
-        exclude = ('slug',)
+        exclude = ('slug','user')

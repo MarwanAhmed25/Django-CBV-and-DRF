@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.text import slugify
 # Create your models here.
 COLORS = (
@@ -19,6 +20,7 @@ class Product(models.Model):
     img3 = models.ImageField(upload_to='images/')
     img4 = models.ImageField(upload_to='images/')
     img5 = models.ImageField(upload_to='images/')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     model_id = models.ForeignKey("product_models.BrandModel", on_delete=models.CASCADE)
     type_id = models.ForeignKey("product_types.Type", on_delete=models.CASCADE)
     slug = models.SlugField()
